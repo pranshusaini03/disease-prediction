@@ -1,0 +1,105 @@
+<style>
+body {
+    font-family: Cambria;
+    height: 100%;
+    background-image: linear-gradient(#4e0374, #c37ee6);
+    margin: 20;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.input-box {
+    margin: 3;
+    border: 2px solid black;
+    background-color: #f0d0ff;
+    width: 25%; /* Set width to 100% for full-width input */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Set font size */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+.logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right:30px;
+            width: 110px;
+            height: auto;
+            }
+</style>
+<header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</header>
+<div class="row" style="margin-bottom: 180px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1 style="color:white;">Liver Disease Predictor</h1>
+        <div class="card card-body" style="border: 1px solid black; background-color: #daa8f4">
+            <form class="form-horizontal" action="/predict" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Age" placeholder="Age (in years)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Gender" placeholder="Gender (0: Male; 1: Female)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Total_Bilirubin" placeholder="Total Bilirubin (in mg/dL)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Direct_Bilirubin" placeholder="Conjugated Bilirubin (in mg/dL)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphatase (in IU/L)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase (in IU/L)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase (in IU/L)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Total_Protiens" placeholder="Total Proteins (in g/dL)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Albumin" placeholder="Albumin (in g/dL)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control input-box" type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio">
+                        </div>
+                    </div>
+                </div>
+                
+                <input style="background-color: #4e0374;margin: 10; padding: 15px 20px; font-size: 20px;" type="submit" class="btn btn-info btn-block" value="Predict">
+            </form>
+        </center>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

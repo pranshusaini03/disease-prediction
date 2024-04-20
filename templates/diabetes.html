@@ -1,0 +1,79 @@
+
+<style>
+body {
+    font-family: Cambria;
+    height: 100%;
+    background-image: linear-gradient(#4e0374, #c37ee6);
+    margin: 20;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.input-box {
+    margin: 3;/* Add margin between input boxes */
+    border: 2px solid black;
+    background-color: #f0d0ff;
+    width: 20%; /* Set width to 100% for full-width input */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 18px; /* Increase font size */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 30;
+    width: 110px; /* Adjust logo size */
+    height: auto;
+}
+
+.btn-predict {
+    background-color: #4e0374;
+    margin-top: 20px; /* Add margin above the button */
+    padding: 15px 30px; /* Increase padding */
+    font-size: 20px; /* Increase font size */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+</style>
+<header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</header>
+<div class="row" style="margin-bottom: 180px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1 style="color:white;">Diabetes Predictor</h1>
+        <div class="card card-body" style="border: 1px solid black; background-color: #daa8f4">
+            <form class="form-horizontal" action="/predict" method="POST">
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="Pregnancies" placeholder="No. of Pregnancies">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="Glucose" placeholder="Glucose">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="BloodPressure" placeholder="Blood Pressure (in mmHg)">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="SkinThickness" placeholder="Skin Thickness (in mm)">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="Insulin" placeholder="Insulin (in µU/ml)">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="BMI" placeholder="BMI">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-box" type="text" name="Age" placeholder="Age (in years)">
+                </div>
+
+                <input class="btn btn-info btn-block btn-predict" type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+    </center>
+    <div class="col-md-2"></div>
+</div>
