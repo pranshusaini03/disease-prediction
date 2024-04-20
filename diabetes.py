@@ -15,10 +15,10 @@ liver_model = load_model('C:/Users/Dell/OneDrive/Desktop/DM PROJECT/diabetes_mod
 # Route for the home page
 @diabetes.route('/')
 def home():
-    return render_template('diabetes.html')
+    return render_template('templates/diabetes.html')
 
 # Route for prediction
-@diabetes.route('/predict', methods=['POST'])
+@diabetes.route('templates/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         # Get form data
